@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -89,7 +89,7 @@ body {
   flex-direction: column;
 }
 
-// .main-content-top>.right {}
+/* .main-content-top>.right {} */
 
 .basics-and-stats {
   display: flex;
