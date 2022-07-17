@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import './App.css';
-// import './App.scss';
 
 import LeftRail from "./components/left-rail";
 import MainContent from "./components/main-content";

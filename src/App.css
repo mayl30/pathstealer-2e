@@ -1,7 +1,50 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --accent: #ff5722;
+  --extraBackground: #171a1e;
+  --background: #222831;
+  --foreground: #2d4059;
+  --secondaryText: #b0afaf;
+  --mainText: white;
+}
+
+p {
+  margin: 0px;
+}
+
 .App {
   display: flex;
   flex-direction: row;
   text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.background-round {
+  border-radius: 10px;
+}
+
+.icon-color {
+  color: var(--accent)
 }
 
 .form {
@@ -35,7 +78,7 @@ body {
 
 .left-rail-content {
   padding: 20px;
-  background-color: #171a1e;
+  background-color: var(--extraBackground);
   height: 100%;
 }
 
@@ -44,7 +87,7 @@ body {
 }
 
 .left-rail-content>.button-section {
-  background-color: #222831;
+  background-color: var(--background);
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 10px;
@@ -56,16 +99,16 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: #222831;
+  background-color: var(--background);
   border: solid;
   border-width: 3px;
-  border-color: #2d4059;
+  border-color: var(--foreground);
   border-radius: 4px;
 }
 
 .selection-modal-btn:hover {
-  background: #222831;
-  border-color: #ff5722;
+  background: var(--background);
+  border-color: var(--accent);
 }
 
 .option-modal-icon {
@@ -79,17 +122,23 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
+  align-self: center;
 }
 
 .option-modal-info>.ancestry {
+  font-family: 'Roboto', sans-serif;
   font-size: .9em;
   margin-bottom: 0px;
-  color: #b0afaf;
+  margin-top: 0px;
+  color: var(--secondaryText);
 }
 
 .option-modal-info>.ancestry-name {
+  font-family: 'Roboto', sans-serif;
   font-size: 1em;
+  margin-top: 0px;
   margin-bottom: 0px;
+  color: var(--mainText);
 }
 
 .main-center {
@@ -113,7 +162,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 43em;
-  height: 7em;
+  background-color: var(--background);
+  color: var(--mainText);
+  padding: 10px;
+
 }
 
 .basics-and-stats>.basics {
@@ -122,11 +174,36 @@ body {
 }
 
 .basics-and-stats>.stats {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 8px;
+}
+
+.stat-grid-item {
+  text-align: center;
+}
+
+.stat-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* .basics-and-stats>.stats>.size, .basics-and-stats>.stats>.speed {
+  margin-right: 10px;
+}
+
+.stat-nums {
+  margin-right: 5px;
+} */
+
+.size-icon {
+  margin-right: 5px;
 }
 
 .ac-and-saves {
   width: 43em;
   height: 7em;
 }
+

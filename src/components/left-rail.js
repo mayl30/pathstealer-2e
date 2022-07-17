@@ -20,7 +20,7 @@ export default function LeftRail() {
       <h3 className="title">Feats and Heritage</h3>
       <div className='button-section'>
         {
-          planContent.map(planItem => <div style={{ paddingBottom: '5px' }}> <OptionModal {...planItem} /> </div>)
+          planContent.map((planItem, i) => <div key={i} style={{ paddingBottom: '5px' }}> <OptionModal {...planItem} /> </div>)
         }
       </div>
 
